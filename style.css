@@ -1,0 +1,1054 @@
+* {
+	margin: 0%;
+}
+:root {
+	--selectedGroup: ;
+
+	--FirstLastRow: ; /* 0 | rows length - 1*/
+
+	--curRows: 5;
+
+	--curGroupColor: ;
+
+	--themeColor1: #4C5055; /* light-gray | white */
+	--themeColor2: black; /* black | purple */
+	--themeColor3: ; /* dark-gray | pink */
+	--themeColor4: ; /* gray | white */
+	--themeColor5: ; /* slightly-darker-than-light-gray | light-pink */
+	--themeColor6: ; /* transparent | whitesmoke */
+	--themeColorSpecial: ; /* white | groupColor */
+	--themeColorSpecial0: ; /* groupColor | black */
+	--themeColorAbsolute: black; /* black | white */
+
+}
+@property --curMainpageColor {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: transparent;
+}
+.noTransition {
+	transition: none !important
+}
+body {
+	background-color: var(--themeColor4);
+	width: auto;
+	height: 7000px;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#background-school {
+	background-image: 
+		/* linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.7), rgba(255,255,255,0.2), rgba(255,255,255,0), rgba(255,255,255,0)), */
+		url("schools/Otonokizaka_High_School0.png");
+	position: relative;
+	margin-top: 3%;
+	padding: 0% 0% 40% 0%;
+	width: auto;
+	left: 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 5;
+	transition: opacity 0.8s, left 1s;
+	overflow: hidden;
+}
+#top-bar {
+	background-color: var(--themeColor3);
+	padding: 0 0 3% 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 11;
+}
+#mainpage {
+	background-image: linear-gradient(90deg, var(--themeColor1), var(--themeColor1));
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 15;
+	background-size: contain;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	text-decoration: none;
+	border-right: solid 0.2vw var(--themeColor2)
+}
+#mainpage:hover #mainpage_inner {
+	--curMainpageColor: var(--randGirlColor_75);
+}
+#mainpage_inner {
+	background-image: linear-gradient(90deg, var(--curMainpageColor), transparent);
+	display: flex;
+	align-items: center;
+	height: 3vw;
+	--curMainpageColor: var(--randGirlColor_half);
+	transition: --curMainpageColor 1s;
+}
+#mainpage_logo {
+	margin-left: 2vw;
+	background-color: var(--randGirlColor);
+	mask-image: url("girls/honoka.png");
+	mask-size: 8vw;
+	mask-repeat: no-repeat;
+	mask-position: 50% 10%;
+	width: 5vw;
+	height: 3vw;
+	transition: width 0.5s;
+}
+#mainpage_text {
+	margin-left: 0.5vw;
+	margin-right: -3vw;
+	color: var(--randGirlColor);
+	font-size: 2vw;
+	font-family: "Lido STF";
+	font-style: italic;
+	font-weight: bold;
+	transition: letter-spacing 0.6s, color 0.8s, text-shadow 0.8s, margin-right 1s, margin-left 0.6s;
+}
+#mainpage:hover #mainpage_text {
+	margin-left: 0;
+	margin-right: 2vw;
+	letter-spacing: 0.25vw;
+	color: white;
+	text-shadow: var(--randGirlColor) 0.05em 0.05em 0.1em, var(--randGirlColor) -0.05em 0.05em 0.1em, var(--randGirlColor) 0.05em -0.05em 0.1em, var(--randGirlColor) -0.05em -0.05em 0.1em, var(--randGirlColor) 0em 0em 0.5em;
+}
+#mainpage:hover #mainpage_logo {
+	width: 7vw;
+}
+.inlineLet {
+	opacity: 0;
+	position: relative;
+	left: -1em;
+	display: inline-block;
+	word-spacing: -0.3em;
+	transition: word-spacing 1s, opacity 0.3s, left 0.3s;
+}
+#mainpage:hover .inlineLet {
+	opacity: 100%;
+	left: 0;
+}
+#mainpage:hover #mp_text_1_letter {
+	transition-delay: 0s, calc(0.2s*0);
+}
+#mainpage:hover #mp_text_2_letter {
+	transition-delay: 0s, calc(0.2s*1);
+}
+#mainpage:hover #mp_text_3_letter {
+	transition-delay: 0s, calc(0.2s*2);
+}
+#mainpage:hover #mp_text_4_letter {
+	transition-delay: 0s, calc(0.2s*3);
+}
+#MPnavigLeft {
+	background-image: 
+		url("arrow_left.png"),
+		linear-gradient(to right, rgba(255, 200, 200, 1), rgba(0, 0, 0, 0));
+	position: absolute;
+	top: 0;
+	left: 0%;
+	margin: 0% 0 0 0;
+	z-index: 15;
+	padding-bottom: 38.68%;
+	padding-right: 4%;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: 30%;
+	opacity: 0%;
+	border-radius: 0px 150px 150px 0px;
+	transition: opacity 1s;
+	cursor: pointer;
+}
+#MPnavigLeft:hover {
+	opacity: 100%
+}
+#MPnavigRight {
+	background-image: 
+		url("arrow_right.png"),
+		linear-gradient(to left, rgba(255, 200, 200, 1), rgba(0, 0, 0, 0));
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0% 0 0 0;
+	z-index: 15;
+	padding-bottom: 38.68%;
+	padding-left: 4%;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: 70%;
+	opacity: 0%;
+	border-radius: 150px 0px 0px 150px;
+	transition: opacity 1s;
+	cursor: pointer;
+}
+#MPnavigRight:hover {
+	opacity: 100%
+}
+#MSIselector {
+	position: sticky;
+	text-align: center;
+	z-index: 7;
+	margin-top: -37%;
+	border: 1px red solid;
+}
+#groupBG {
+	background-color: var(--themeColor4);
+	position: absolute;
+	width: 21%;
+	height: 24%;
+	margin-left: 39.5%;
+	bottom: 0px;
+	text-align: center;
+	border-radius: 30% 30% 0 0;
+	cursor: pointer;
+	transition: height 0.6s, box-shadow 0.6s;
+	box-shadow: 0 0.8vw inset deeppink; /*mb fix the scaling*/
+	z-index: 10;
+}
+#MSgrouplogo {
+	background-image: url("general_logos/muse.png");
+	margin-top: 5.5%;
+	margin-left: 20%;
+	width: 60%;
+	padding: 0 0 35% 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	opacity: 1;
+	transition: opacity 0.4s;
+}
+#MSprojlogo {
+	background-image:
+	url("general_logos/SIPshad.png");
+	position: absolute;
+	width: 20%;
+	margin: 0 0 0 0;
+	margin-left: 40%;
+	height: 11.5%;
+	top: 7%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	transition: opacity 0.4s, margin-left 0.6s, background-image 0.4s, top 0.6s;
+	z-index: 8;
+}
+#MSgradient {
+	background-image: linear-gradient(to top, var(--themeColor4) 3%, color-mix(in oklab, var(--themeColor4) 70%, transparent 30%), transparent 50%);
+	position: absolute;
+	bottom: -0px;
+	height: 100%;
+	width: 100%;
+	z-index: 9;
+	transition: height 1s;
+}
+#MSgradient_gBG {
+	background-image: linear-gradient(to top, var(--themeColor4), color-mix(in oklab, var(--themeColor4) 70%, transparent 30%), 
+	color-mix(in oklab, var(--themeColor4) 20%, transparent 80%), transparent, transparent, transparent, transparent);
+	position: absolute;
+	bottom: -0px;
+	height: 100%;
+	width: 100%;
+	z-index: 11;
+}
+.MScharacters {
+	position: absolute; /* IMPORTANT */
+	width: 100%;
+	z-index: 1;
+	transition: bottom 0.6s;
+}
+#background-school .MScharacters.myHidden {
+	bottom: -80%;
+}
+#row1 {
+	mask-image: url("girls/honoka.png");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: center;
+	background-image: url("girls/honoka.png");
+	height: 75%;
+	margin-left: 34.5%;
+	width: 31%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center;
+	z-index: 8;
+	bottom: 3%;
+	transition-delay: calc(200ms / (var(--curRows) - 1) * ((var(--curRows) - 1) / 2 + var(--PosNegOne) * ((var(--curRows) - 1) / 2)));
+	/* transition-delay: calc(200ms / (var(--curRows) - 1) * (var(--FirstLastRow) + var(--PosNegOne)*6)); */
+}
+#row2 {
+	mask-image: url("girls/kotori.png"), url("girls/umi.png");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: left, right;
+	background-image: url("girls/kotori.png"), url("girls/umi.png");
+	height: 73%;
+	margin-left: 27%;
+	width: 46%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center, left, right;
+	z-index: 7;
+	bottom: 3%;
+	transition-delay: calc(200ms / (var(--curRows) - 1) * ((var(--curRows) - 1) / 2 + var(--PosNegOne) * ((var(--curRows) - 3) / 2)));
+	/* transition-delay: calc(200ms / (var(--curRows) - 1) * (var(--FirstLastRow) + var(--PosNegOne)*5)); */
+}
+#row3 {
+	mask-image: url("girls/maki.png"), url("girls/eli.png");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: left, right;
+	background-image: url("girls/maki.png"), url("girls/eli.png");
+	height: 71%;
+	margin-left: 19.5%;
+	width: 61%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center, left, right;
+	z-index: 6;
+	bottom: 3%;
+	transition-delay: calc(200ms / (var(--curRows) - 1) * ((var(--curRows) - 1) / 2 + var(--PosNegOne) * ((var(--curRows) - 5) / 2)));
+	/* transition-delay: calc(200ms / (var(--curRows) - 1) * (var(--FirstLastRow) + var(--PosNegOne)*4)); */
+}
+#row4 {
+	mask-image: url("girls/hanayo.png"), url("girls/nozomi.png");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: left, right;
+	background-image: url("girls/hanayo.png"), url("girls/nozomi.png");
+	height: 69%;
+	margin-left: 12%;
+	width: 76%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center, left, right;
+	z-index: 5;
+	bottom: 3%;
+	transition-delay: calc(200ms / (var(--curRows) - 1) * ((var(--curRows) - 1) / 2 + var(--PosNegOne) * ((var(--curRows) - 7) / 2)));
+	/* transition-delay: calc(200ms / (var(--curRows) - 1) * (var(--FirstLastRow) + var(--PosNegOne)*3)); */
+}
+#row5 {
+	mask-image: url("girls/rin.png"), url("girls/nico.png");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: left, right;
+	background-image: url("girls/rin.png"), url("girls/nico.png");
+	height: 67%;
+	margin-left: 4.5%;
+	width: 91%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center, left, right;
+	z-index: 4;
+	bottom: 3%;
+	transition-delay: calc(200ms / (var(--curRows) - 1) * ((var(--curRows) - 1) / 2 + var(--PosNegOne) * ((var(--curRows) - 9) / 2)));
+	/* transition-delay: calc(200ms / (var(--curRows) - 1) * (var(--FirstLastRow) + var(--PosNegOne)*2)); */
+}
+#row6 {
+	mask-image: url("girls/rin.png"), url("girls/nico.png");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: left, right;
+	background-image: none, none;
+	height: 65%;
+	margin-left: -5%;
+	width: 110%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center, left, right;
+	z-index: 3;
+	bottom: 3%;
+	transition-delay: calc(200ms / (var(--curRows) - 1) * ((var(--curRows) - 1) / 2 + var(--PosNegOne) * ((var(--curRows) - 11) / 2)));
+	/* transition-delay: calc(200ms / (var(--curRows) - 1) * (var(--FirstLastRow) + var(--PosNegOne)*1)); */
+}
+#row7 {
+	mask-image: url("girls/rin.png"), url("girls/nico.png");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: left, right;
+	background-image: none, none;
+	height: 63%;
+	margin-left: -12.5%;
+	width: 125%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center, left, right;
+	z-index: 2;
+	bottom: 3%;
+	transition-delay: calc(200ms / (var(--curRows) - 1) * ((var(--curRows) - 1) / 2 + var(--PosNegOne) * ((var(--curRows) - 13) / 2)));
+	/* transition-delay: calc(200ms / (var(--curRows) - 1) * (var(--FirstLastRow) + var(--PosNegOne)*0)); */
+}
+#loadingScreen {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: var(--themeColor4);
+	top: 0px;
+	z-index: 50;
+	opacity: 1;
+	transition: opacity 1s;
+}
+.inner>div {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	
+	text-align: center;
+	font-family: "Verdana";
+	font-style: normal;
+	font-weight: normal;
+	/* font-size: 550%; */
+	font-size: 4.5vw;
+	letter-spacing: 0.3em;
+	width: auto;
+	white-space: nowrap;
+	z-index: 100;
+	position: relative;
+}
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+#lS-1-line {
+	margin-bottom: 7%;
+}
+#lS-2-line {
+	margin-bottom: 7%;
+}
+#testbox1 {
+	background-color: var(--themeColor4);
+	width: 60%;
+	height: 100%;
+	/*border: red solid 1px;*/
+	position: absolute;
+	top: 0;
+	right: 20%;
+	z-index: 1000;
+}
+.Anim_slide1 {
+	animation-name: slide1;
+	animation-duration: 1.025s;
+}
+#testbox2 {
+	background-color: var(--themeColor4);
+	width: 90%;
+	height: 100%;
+	/*border: red solid 1px;*/
+	position: absolute;
+	top: 0;
+	left: 5%;
+	z-index: 1000;
+}
+.Anim_slide2 {
+	animation-name: slide2;
+	animation-duration: 1.025s;
+}
+#testbox3 {
+	background-color: var(--themeColor4);
+	width: 60%;
+	height: 100%;
+	/*border: red solid 1px;*/
+	position: absolute;
+	top: 0;
+	right: 20%;
+	z-index: 1000;
+}
+.Anim_slide3 {
+	animation-name: slide3;
+	animation-duration: 1.025s;
+}
+@keyframes slide1 {
+	0% {width:60%;}
+	100% {width:0%}
+}
+@keyframes slide2 {
+	0% {width:90%;}
+	100% {width:0%}
+}
+@keyframes slide3 {
+	0% {width:60%;}
+	100% {width:0%}
+}
+#piska1 {
+	height: 100%;
+	width: 0px;
+	background-color: #EA5094;
+	transition: width 0.25s;
+}
+#piska2 {
+	height: 100%;
+	width: 0px;
+	position: absolute;
+	right: 0px;
+	background-color: #EA5094;
+	transition: width 0.25s;
+}
+#piska3 {
+	height: 100%;
+	width: 0px;
+	background-color: #EA5094;
+	transition: width 0.25s;
+}
+/* #lS-1-line {
+	-webkit-background-clip:;
+    -webkit-text-fill-color:;
+	background:;
+}
+#lS-2-line {
+	-webkit-background-clip:;
+    -webkit-text-fill-color:;
+	background:;
+}
+#lS-3-line {
+	-webkit-background-clip:;
+    -webkit-text-fill-color:;
+	background:;
+} */
+#girlPFP {
+	background-image: /* linear-gradient(90deg, rgba(7,19,52,0.5), rgba(7,19,52,0.5)), */ url("girls_pfp/honoka.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+	mask-image: url("girls_pfp/honoka.png");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	
+	position: absolute;
+	top: 0;
+    left: -20%;
+	width: 40vw;
+    height: 40vw;
+	z-index: 6;
+	opacity: 0;
+	/* transition: left 0.5s, opacity 0.5s; */
+}
+/* #girlPFP.night {
+	
+} */
+#girlPFP.start {
+	transition: left 0s, opacity 0s;
+	opacity: 0;
+	left: -20%;
+}
+#girlPFP.end {
+	transition: left 0.65s, opacity 0.8s;
+	transition-delay: 0.15s, 0.15s;
+	opacity: 100%;
+	left: 13%;
+}
+#girlPFP.hide {
+	transition: left 0.65s, opacity 0.8s;
+	opacity: 0;
+	left: -20%;
+}
+#menuBox {
+	position: relative;
+	margin-top: -40%;
+	margin-left: 100%; 
+	padding-top: 40%;
+	width: 25%;
+	background-color: var(--themeColor4);
+	background-image: linear-gradient(90deg, transparent, var(--themeColor6), transparent);
+	z-index: 6;
+	transition: margin-left 1s;
+}
+#menuBox-outerGrad {
+	background-image: linear-gradient(to left, var(--themeColor4), transparent);
+	position: absolute;
+	right: 100%;
+	bottom: 0%;
+	padding-top: 40vw;
+	width: 0;
+	transition: width 1s, background-image 1s;
+}
+#menuList {
+	display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+#menuList .girlName {
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	
+	/* background-color: white; */
+	font-family: "Lido STF";
+	font-size: 2.1vw;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	word-spacing: 0.25em;
+	cursor: pointer;
+	white-space: nowrap;
+	
+	
+	color: white;
+	
+	transition: margin-left 0.8s, padding-right 0.3s, font-size 0.3s, border 0.3s, padding 0.3s, background-image 0.5s, mask-image 0.5s, letter-spacing 0.5s;
+	text-shadow: 0.04em 0.04em 0.09em deeppink;
+	
+	display: block;
+	
+	padding-bottom: 0.5vw;
+	padding-top: 0.5vw;
+	margin-left: 200%;
+}
+#menuList .girlName:hover {
+	font-size: 1.8vw;
+	padding: 0.7vw 1.8vw 0.7vw 1.8vw;
+}
+#menuList .girlName_smolFont {
+	font-size: 1.7vw;
+	letter-spacing: 0.08em;
+}
+#menuList .girlName_loaded {
+	margin-left: 0%;
+}
+#menuList .girlName_unloaded {
+	margin-left: 200%;
+}
+.gN_grad {
+	position: relative;
+	bottom: 100%;
+	left: -2vw;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	padding: 0 2vw 0 2vw;
+	z-index: -1;
+	
+	background-image: url("arrow_right_neon.png"), url("arrow_left_neon.png");
+	mask-image: url("arrow_right_neon.png"), url("arrow_left_neon.png");
+	mask-position: left, right;
+	mask-repeat: no-repeat;
+	mask-size: 1.75vw;
+	background-position: left, right, center;
+    background-repeat: no-repeat;
+    background-size: 1.75vw, 1.75vw, contain;
+}
+.girlName:hover .gN_grad {
+	opacity: 100%;
+}
+.curSelected {
+    padding: 0.7vw 1.3vw 0.7vw 1.3vw;
+    background-image: linear-gradient(90deg, transparent, #ffffffd6, transparent);
+    mask-image: linear-gradient(0deg, transparent, white 20%, white 80%, transparent);
+    letter-spacing: 0.15em !important;
+}
+#menuList .girlName:hover.curSelected {
+	padding: 0.7vw 3.1vw 0.7vw 3.1vw;
+}
+.invi {
+	visibility: hidden !important;
+}
+#nightModeButton {
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	
+    font-family: "Verdana";
+    font-size: 1.4vw;
+    text-shadow: 0.02em 0.03em 0.05em var(--themeColor5);
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 75%;
+    z-index: 70;
+    color: var(--themeColor5);
+}
+#nightModeIcon {
+	position: absolute;
+    background-image: linear-gradient(90deg, var(--themeColor5), var(--themeColor5));
+    mask-image: url(nightmode_icon.png);
+    mask-size: contain;
+    mask-position: left;
+    mask-repeat: no-repeat;
+    right: 0;
+    width: 100%;
+    height: 55%;
+    padding-left: 25%;
+}
+#descBG {
+	display: flex;
+    justify-content: center;
+	position: absolute;
+	background-color: color-mix(in oklab, var(--themeColorAbsolute) 80%, transparent 20%);
+    background-size: 35vw 40vw;
+    background-repeat: no-repeat;
+    background-position: bottom;
+	box-shadow: 0vw 0vw 1.5vw 1.5vw color-mix(in oklab, var(--themeColorAbsolute) 80%, transparent 20%);;
+    height: auto;
+    top: -35vw;
+	padding-bottom: 0.5vw;
+    right: 20vw;
+    z-index: 12;
+	/* opacity: 100%; */
+	/* transition: top 1.2s, opacity 1.2s, height 0.8s; */
+	transition: top 1.2s, height 0.8s;
+	
+}
+#descBG.descBG_loaded {
+	/* transition: top 1.2s, opacity 1.4s, height 0.8s; */
+	transition: top 1.2s, height 0.8s;
+	/* transition-delay: 0s, 0.2s; */
+	/* opacity: 100%; */
+	top: 0;
+}
+#descBG.descBG_unloaded {
+	/* transition: top 1.2s, opacity 0.8s, height 0.8s; */
+	transition: top 1.2s, height 0.8s;
+	/* opacity: 0; */
+	top: -35vw;
+}
+#descWrapper {
+	height: fit-content;
+}
+#descInfo {
+	font-family: "Lido STF";
+    position: relative;
+    top: 0.5vw;
+    width: 24vw;
+    height: auto;
+    text-align: center;
+    color: var(--themeColorSpecial);
+    font-size: 1.2vw;
+    letter-spacing: 0.04em;
+    word-spacing: 0.25em;
+	/* text-shadow: 0.05em 0 0.05em var(--themeColorSpecial0), -0.05em 0 0.05em var(--themeColorSpecial0), 0 0.05em 0.05em var(--themeColorSpecial0), 0 -0.05em 0.05em var(--themeColorSpecial0); */
+	white-space: pre-line;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+#descInfo.shown {
+	opacity: 100%;
+}
+#descInfo.myHidden {
+	opacity: 0;
+}
+#descInfo.myHide {
+	transition: opacity 0s;
+	opacity: 0;
+}
+#menuButtons_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 10;
+	position: absolute;
+	padding: 0 0.5vw 0 0.5vw;
+	top: 28vw;
+	left: 25.5vw;
+}
+#extra_border.shown {
+	opacity: 100%;
+}
+a#extra_border.myHidden {
+	opacity: 0;
+	visibility: hidden;
+	transform: skewX(-20deg) translateX(-10vw);
+}
+a#extra_border.myHide {
+	transition: opacity 0s;
+	opacity: 0;
+	visibility: hidden;
+}
+/* #extra_border {
+	z-index: 10;
+	position: absolute;
+	text-decoration: none;
+	top: 28vw;
+	left: 26.5vw;
+	transform: skewX(-20deg);
+	font-family: "Trebuchet MS";
+	font-size: 1.5vw;
+	letter-spacing: 0.08em;
+    word-spacing: 0.05em;
+	padding-left: 0;
+	border-left: solid 0.5vw var(--curGroupColor);
+	transition: left 0.4s, top 0.5s, font-size 0.5s, text-shadow 0.5s, letter-spacing 0.5s, opacity 0.5s, visibility 0.5s, transform 0.5s;
+} */
+#extra_border {
+	left: 0.5vw;
+	z-index: 10;
+	position: relative;
+	text-decoration: none;
+	transform: skewX(-20deg);
+	font-family: "Trebuchet MS";
+	font-size: 1.5vw;
+	letter-spacing: 0.08em;
+    word-spacing: 0.05em;
+	padding-left: 0;
+	margin-bottom: 2vw;
+	border-left: solid 0.5vw var(--curGroupColor);
+	transition: left 0.4s, top 0.5s, font-size 0.5s, text-shadow 0.5s, letter-spacing 0.5s, opacity 0.5s, visibility 0.5s, transform 0.5s;
+}
+#extra_border:hover {
+	transform: translateX(-0.5vw) skewX(-20deg);
+}
+#extra_border:hover #plink_wrapper {
+	transform: translateX(1vw);
+	box-shadow: 0 0 0.5vw 0.25vw var(--curGroupColor);
+}
+#extra_border:hover #profile_link {
+	color: white;
+	text-shadow: 0.04em 0.04em 0.09em var(--curGroupColor), -0.04em 0.04em 0.09em var(--curGroupColor), 0.04em -0.04em 0.09em var(--curGroupColor), -0.04em -0.04em 0.09em var(--curGroupColor);
+}
+#plink_wrapper {
+	position: relative;
+	left: -0.5vw;
+	display: flex;
+	padding: 0.3vw 1vw 0.3vw 1vw;
+	border-left: solid 0.5vw var(--curGroupColor);
+	background-color: var(--themeColor1);
+	text-align: center;
+	box-shadow: 0.5vw 0.25vw 0.5vw rgba(0, 0, 0, 0.5);
+	transition: transform 0.4s, box-shadow 0.5s;
+}
+#profile_link {
+	z-index: 11;
+	font-family: "Trebuchet MS";
+	display: block;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	height: auto;
+	color: var(--curGroupColor);
+	font-size: 1.5vw;
+	letter-spacing: 0.08em;
+    word-spacing: 0.05em;
+	transition: top 0.5s, font-size 0.5s, text-shadow 0.5s, letter-spacing 0.5s, opacity 0.5s, color 0.5s;
+	opacity: 100%;
+}
+#back_button {
+	left: -0.5vw;
+	position: relative;
+	width: fit-content;
+	color: transparent;
+	cursor: pointer;
+	transform: skewX(-20deg);
+	font-family: "Trebuchet MS";
+	font-size: 1.5vw;
+	letter-spacing: 0.08em;
+    word-spacing: 0.05em;
+	padding-right: 0;
+	border-right: solid 0.5vw red;
+	transition: left 0.4s, top 0.5s, font-size 0.5s, text-shadow 0.5s, letter-spacing 0.5s, opacity 0.5s, visibility 0.5s, transform 0.5s, border-right 0.2s;
+}
+div#back_button.myHidden {
+	opacity: 0;
+	visibility: hidden;
+	transform: skewX(-20deg) translateX(10vw);
+	border-right: solid 0.5vw gray;
+}
+#back_button.myHidden div#bbutton_wrapper{
+	border-right: solid 0.5vw gray;
+}
+#back_button.myHidden div#bbutton_text{
+	transition: top 0.5s, font-size 0.5s, text-shadow 0.5s, letter-spacing 0.5s, opacity 0.5s, color 0.2s;
+	color: gray;
+}
+#back_button.shown {
+	opacity: 100%;
+}
+#back_button.myHide {
+	transition: opacity 0s;
+	opacity: 0;
+	visibility: hidden;
+}
+#back_button:hover {
+	transform: translateX(0.5vw) skewX(-20deg);
+}
+#back_button:hover #bbutton_wrapper {
+	transform: translateX(-1vw);
+	box-shadow: 0 0 0.5vw 0.25vw red;
+}
+#back_button:hover #bbutton_text {
+	color: white;
+	text-shadow: 0.04em 0.04em 0.09em red, -0.04em 0.04em 0.09em red, 0.04em -0.04em 0.09em red, -0.04em -0.04em 0.09em red;
+}
+#bbutton_wrapper {
+	position: relative;
+	right: -0.5vw;
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 0.3vw 1.5vw 0.3vw 1.5vw;
+	border-right: solid 0.5vw red;
+	background-color: var(--themeColor1);
+	text-align: center;
+	box-shadow: -0.5vw 0.25vw 0.5vw rgba(0, 0, 0, 0.5);
+	transition: transform 0.4s, box-shadow 0.5s, border-right 0.2s;
+}
+#bbutton_text {
+	z-index: 11;
+	font-family: "Trebuchet MS";
+	display: block;
+	position: relative;
+	text-align: center;
+	color: red;
+	font-size: 1.25vw;
+	letter-spacing: 0.08em;
+    word-spacing: 0.05em;
+	transition: top 0.5s, font-size 0.5s, text-shadow 0.5s, letter-spacing 0.5s, opacity 0.5s, color 0.5s;
+	opacity: 100%;
+}
+#groupSelection_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 11;
+	top: 28vw;
+	right: 20vw;
+	width: 24vw;
+	transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+	transition-delay: 0s, 0s, 0s;
+}
+#groupSelection_wrapper.myHide {
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(10vw);
+}
+#groupSelection_buttonsWrapper {
+	z-index: 11;
+	display: flex;
+	position: relative;
+	height: 5vw;
+	width: 24vw;
+	align-items: center;
+	border-radius: 2.5vw;
+	box-shadow: 0 0 0.5vw 0.5vw color-mix(in oklab, var(--themeColorAbsolute) 70%, transparent 30%);
+	background-color: color-mix(in oklab, var(--themeColorAbsolute) 70%, transparent 30%);
+}
+#groupSelection_body {
+	z-index: 11;
+	flex: 1;
+	height: 6vw;
+	border-radius: 3vw;
+	border-left: solid 0.5vw color-mix(in oklab, var(--curGroupColor) 80%, transparent 20%);
+	border-right: solid 0.5vw color-mix(in oklab, var(--curGroupColor) 80%, transparent 20%);
+	background-color: var(--themeColor1);
+}
+#groupSelection_buttonLeft {
+	background-color: var(--curGroupColor);
+	background-image: url('arrow_left_Swhite.png'), url('arrow_left_Swhite.png');
+	background-repeat: no-repeat;
+	background-size: 2vw;
+	background-position: 85% center, 15% center;
+	mask-image: url('arrow_left_neon.png'), url('arrow_left_neon.png');
+	mask-repeat: no-repeat;
+	mask-size: 2vw;
+	mask-position: 85% center, 15% center;
+	width: 4vw;
+	height: 4vw;
+	cursor: pointer;
+}
+#groupSelection_buttonRight {
+	background-color: var(--curGroupColor);
+	background-image: url('arrow_right_Swhite.png'), url('arrow_right_Swhite.png');
+	background-repeat: no-repeat;
+	background-size: 2vw;
+	background-position: 85% center, 15% center;
+	mask-image: url('arrow_right_neon.png'), url('arrow_right_neon.png');
+	mask-repeat: no-repeat;
+	mask-size: 2vw;
+	mask-position: 85% center, 15% center;
+	width: 4vw;
+	height: 4vw;
+	cursor: pointer;
+}
+#groupSelection_selectorWrapper {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	z-index: 10;
+}
+#groupSelection_selectorLeftOrnament {
+	position: relative;
+	right: -1vw;
+	height: 2vw;
+	width: 20%;
+	border-top-right-radius: 50%;
+	border-color: color-mix(in oklab, var(--themeColorAbsolute) 70%, transparent 30%);
+	border-width: 1vw;
+	border-style: solid;
+	mask-image: linear-gradient(30deg, transparent 75%, black 75%);
+}
+#groupSelection_selectorRightOrnament {
+	position: relative;
+	left: -1vw;
+	height: 2vw;
+	width: 20%;
+	border-top-left-radius: 50%;
+	border-color: color-mix(in oklab, var(--themeColorAbsolute) 70%, transparent 30%);
+	border-width: 1vw;
+	border-style: solid;
+	mask-image: linear-gradient(-30deg, transparent 75%, black 75%);
+}
+#groupSelection_selectorBody {
+	top:-0.5vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	background-color: color-mix(in oklab, var(--themeColorAbsolute) 70%, transparent 30%);
+	height: 2.5vw;
+	width: 50%;
+	border-bottom-right-radius: 1.5vw;
+	border-bottom-left-radius: 1.5vw;
+}
+.groupSelection_groupButtons {
+	z-index: 12;
+	width: 1.25vw;
+	height: 1.25vw;
+	cursor: pointer;
+	background-color: var(--themeColor5);
+	border-radius: 2vw;
+	transition: box-shadow 0s, background-color 0s;
+}
+.groupSelection_groupButtons:hover {
+	box-shadow: 0 0 0.35vw 0.08vw var(--selectedGroup);
+	background-color: color-mix(in oklab, var(--themeColor5) 50%, var(--selectedGroup) 50%);
+	transition: box-shadow 0.3s, background-color 0.3s;
+}
+div.groupSelection_groupButtons.selected {
+	transition-delay: 0s, 1s;
+	box-shadow: 0 0 0.5vw 0.15vw var(--curGroupColor);
+	background-color: var(--curGroupColor);
+}
+.groupSelection_groupButtons.selected:hover {
+	box-shadow: 0 0 0.75vw 0.3vw var(--curGroupColor);
+}

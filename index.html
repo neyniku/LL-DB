@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LoveLive!MC Database</title>
+		<link rel="icon" type="image/x-icon" href="favicon.png">
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body id="body" onload="animLoaded()">
+		<div id="loadingScreen">
+			<div class="outer">
+				<div class="middle">
+					<div class="inner">
+						<div id="lS-1-line">LOVE LIVE
+							<div id="testbox1">
+								<div id="piska1"></div>
+							</div>
+						</div>
+						<div id="lS-2-line">MAIN CHARACTER
+							<div id="testbox2">
+								<div id="piska2"></div>
+							</div>
+						</div>
+						<div id="lS-3-line">DATABASE
+							<div id="testbox3">
+								<div id="piska3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="top-bar">
+			<div id="nightModeButton" onclick="changeTheme()">Night mode
+				<div id="nightModeIcon"></div>
+			</div>
+			<a id="mainpage" href="index.html">
+				<div id="mainpage_inner">
+					<div id="mainpage_logo"></div>
+					<div id="mainpage_text">LL!
+						<div class="inlineLet" id="mp_text_1_letter">M
+							<div class="inlineLet" id="mp_text_2_letter">C
+								<div class="inlineLet" id="mp_text_3_letter">D
+									<div class="inlineLet" id="mp_text_4_letter">B</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+			<div id="background-school">
+				<div id="groupBG" onclick="enterSchoolMenu()">
+					<div id="MSgrouplogo"></div>
+					<div id="MSgradient_gBG"></div>
+				</div>
+				<div id="MSprojlogo"></div>
+				<!--<div id="projlogogradient"></div>-->
+				<div class="navigleft" id="MPnavigLeft" onclick="back()"></div>
+				<div class="navigright" id="MPnavigRight" onclick="forward()"></div>
+				<div class="MScharacters" id="row1"></div>
+				<div class="MScharacters" id="row2"></div>
+				<div class="MScharacters" id="row3"></div>
+				<div class="MScharacters" id="row4"></div>
+				<div class="MScharacters" id="row5"></div>
+				<div class="MScharacters myHidden" id="row6"></div>
+				<div class="MScharacters myHidden" id="row7"></div>
+				<div id="MSgradient"></div>
+				<!-- <div id="girlPFP"></div> -->
+				<div id="descBG" class="descBG_unloaded">
+					<div id="descWrapper">
+						<div id="descInfo" class="myHidden">test</div>
+					</div>
+				</div>
+				<div id="menuButtons_wrapper">
+					<a id="extra_border" class="myHidden" target="_blank" href="girls_pages/kousaka_honoka.html">
+						<div id="plink_wrapper">
+							<div id="profile_link">Go to profile</div>
+						</div>
+					</a>
+					<div id="back_button" class="myHidden">
+						<div id="bbutton_wrapper">
+							<div id="bbutton_text">Back</div>
+						</div>
+					</div>
+				</div>
+				<div id="groupSelection_wrapper" class="myHide">
+					<div id="groupSelection_buttonsWrapper">
+						<div id="groupSelection_buttonLeft"></div>
+						<div id="groupSelection_body"></div>
+						<div id="groupSelection_buttonRight"></div>
+					</div>
+					<div id="groupSelection_selectorWrapper">
+						<div id="groupSelection_selectorLeftOrnament"></div>
+						<div id="groupSelection_selectorBody">
+							<div class="groupSelection_groupButtons"></div>
+							<div class="groupSelection_groupButtons"></div>
+							<div class="groupSelection_groupButtons"></div>
+							<div class="groupSelection_groupButtons"></div>
+							<div class="groupSelection_groupButtons"></div>
+						</div>
+						<div id="groupSelection_selectorRightOrnament"></div>
+					</div>
+				</div>
+			</div>
+			<div id="menuBox">
+				<div id="menuBox-outerGrad"></div>
+				<div id="menuList">
+					<div class="girlName">Kousaka Honoka
+						<div class="gN_grad"></div>
+					</div>
+					<div class="girlName">Sonoda Umi
+						<div class="gN_grad"></div>
+					</div>
+					<div class="girlName">Minami Kotori
+						<div class="gN_grad"></div>
+					</div>
+					<div class="girlName">Hoshizora Rin
+						<div class="gN_grad"></div>
+					</div>
+					<div class="girlName">Koizumi Hanayo
+						<div class="gN_grad"></div>
+					</div>
+					<div class="girlName">Nishikino Maki
+						<div class="gN_grad"></div>
+					</div>
+					<div class="girlName">Toujou Nozomi
+						<div class="gN_grad"></div>
+					</div>
+					<div class="girlName">Ayase Eli
+						<div class="gN_grad"></div>
+					</div>
+					<div class="girlName">Yazawa Nico
+						<div class="gN_grad"></div>
+					</div>
+				</div>
+			</div>
+		<!-- <div id="MSIselector">_/_/_/_/_</div> (return to later) -->
+	</body>
+</html>
+<script src="script.js"></script>

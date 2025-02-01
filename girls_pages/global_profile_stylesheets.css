@@ -1,0 +1,214 @@
+@media screen and (orientation:landscape) {
+    :root {
+        --circlesDiameter: 20vw;
+        --circlesBorderWidth: 1.5vw;
+    }
+}
+@media screen and (orientation:portrait) {
+    :root {
+        --circlesDiameter: 50vw;
+        --circlesBorderWidth: 4vw;
+    }
+}
+
+:root {
+    --girlColorSolid: black;
+    --girlColor25perc: #00000040;
+    --girlColor50perc: #00000080;
+    --girlColor56perc: #00000090;
+    --loadingPercentageBase: 25%; 
+    --currentLoadingStage: 0;
+}
+
+@property --currentLoadingProgress {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+ 
+* {
+	margin: 0%;
+    font-family: "Lido STF";
+    color: rgba(0,0,0,0.5);
+}
+/* html {
+    height: 100%;
+} */
+body {
+    background-color:var(--girlColor56perc);
+    min-height:100%;
+    height: auto;
+}
+#main {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5vh;
+    height: auto;
+    border: var(--girlColorSolid) solid 0.5vw;
+    border-radius: 5vw;
+    overflow: hidden;
+}
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 0.5vw;
+    background-image: linear-gradient(90deg, transparent, var(--girlColor50perc), transparent);
+    mask-image: linear-gradient(0deg, transparent, var(--girlColorSolid) 20%, var(--girlColorSolid) 80%, transparent);
+    text-shadow: 0.05em 0.05em 0.1em var(--girlColorSolid),
+    -0.05em 0.05em 0.1em var(--girlColorSolid),
+    0.05em -0.05em 0.1em var(--girlColorSolid),
+    -0.05em -0.05em 0.1em var(--girlColorSolid),
+    0 0 0.5em var(--girlColorSolid)
+}
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 0.5vw;
+    background-image: linear-gradient(90deg, transparent, var(--girlColor50perc), transparent);
+    mask-image: linear-gradient(0deg, transparent, var(--girlColorSolid) 20%, var(--girlColorSolid) 80%, transparent);
+    text-shadow: 0.05em 0.05em 0.1em var(--girlColorSolid),
+    -0.05em 0.05em 0.1em var(--girlColorSolid),
+    0.05em -0.05em 0.1em var(--girlColorSolid),
+    -0.05em -0.05em 0.1em var(--girlColorSolid),
+    0 0 0.5em var(--girlColorSolid)
+}
+p1 {
+    font-size: 1.5em;
+    display: block;
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    white-space: pre-line;
+
+    text-shadow: 0.05em 0.05em 0.1em var(--girlColor50perc),
+    -0.05em 0.05em 0.1em var(--girlColor50perc),
+    0.05em -0.05em 0.1em var(--girlColor50perc),
+    -0.05em -0.05em 0.1em var(--girlColor50perc),
+    0 0 0.5em var(--girlColor50perc)
+    
+}
+#pfp {
+    background-image: url(../girls_pfp/chika.png), url(../general_logos/aqours.png), radial-gradient(ellipse 7vw 2vw at 20% 6%,  deepskyblue, transparent);
+    background-size: cover, 40%;
+    background-repeat: no-repeat;
+    border-color: var(--girlColorSolid);
+    background-position-y: center, /* top  */2%;
+    background-position-x: 20%, /* left */ 2%;
+    mask-image: linear-gradient(0deg, transparent 2%, black 15%), 
+    linear-gradient(270deg, transparent 2%, black 15%);
+    mask-composite: intersect;
+    border-width: 0.4vw;
+    width: 24vw;
+    height: 40vw;
+}
+#metrics {
+    border-color: var(--girlColorSolid);
+    border-width: 0.4vw;
+    border-top-style: solid;
+}
+#bio {
+    width: 55.6vw;
+    border-color: var(--girlColorSolid);
+    border-width: 0.4vw;
+    border-right-style: solid;
+}
+#bio:last-child {
+    padding-bottom: 0.5vw;
+}
+.divider {
+    height: 0.1vw;
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    background-color:var(--girlColorSolid)
+}
+#bgpattern {
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(90deg, var(--girlColor25perc), var(--girlColor56perc), var(--girlColor25perc));
+    mask-image: url(../bgpattern1.png);
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    background-color: white;
+}
+.loadingContainerWrapper {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    perspective: 20vw;
+}
+#loadingContainer {
+    background-color: white;
+    background-image: linear-gradient(var(--angleGrad1), var(--girlColorSolid), transparent 35%), linear-gradient(var(--angleGrad2), var(--girlColorSolid), transparent 35%);
+    /* mask-image: url(../bgpattern.png);
+    background-image: linear-gradient(90deg, lightcyan, lightcyan); */
+    display: flex/* none */;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 50;
+    transition: opacity 1s;
+    transition-delay: 0.5s;
+}
+#circle1 {
+    background-color: transparent;
+    mask-image: linear-gradient(90deg, black 51%, transparent 51%);
+    position: relative;
+    height: var(--circlesDiameter);
+    width: var(--circlesDiameter);
+    border: var(--circlesBorderWidth) var(--girlColorSolid) solid;
+    border-radius: calc(var(--circlesDiameter) + var(--circlesBorderWidth)) 0 0 calc(var(--circlesDiameter) + var(--circlesBorderWidth));
+    transform: rotate(0deg) /* rotateX(135deg) */;
+    transition: transform 0.5s;
+}
+#circle2 {
+    background-color: transparent;
+    mask-image: linear-gradient(90deg, black 51%, transparent 51%);
+    position: relative;
+    height: var(--circlesDiameter);
+    width: var(--circlesDiameter);
+    border: var(--circlesBorderWidth) var(--girlColorSolid) solid;
+    border-radius: calc(var(--circlesDiameter) + var(--circlesBorderWidth)) 0 0 calc(var(--circlesDiameter) + var(--circlesBorderWidth));
+    transform: rotate(0deg) /* rotateX(45deg) */;
+    transition: transform 0.5s;
+}
+#circleHide {
+    background-image: linear-gradient(90deg, white 50%, transparent 50%);
+    position: relative;
+    height: calc(var(--circlesDiameter) + 5vw);
+    width: calc(var(--circlesDiameter) + 3vw);
+}
+#girlFace {
+    background-image: url(../girls/chika.png);
+    background-size: calc(2*var(--circlesDiameter));
+    background-position: top center;
+    mask-image: radial-gradient(circle, black 65%, transparent 70%);
+    position: relative;
+    height: var(--circlesDiameter);
+    width: var(--circlesDiameter);
+    border-radius: var(--circlesDiameter);
+}
+#circleFull {
+    background-color: transparent;
+    position: relative;
+    height: var(--circlesDiameter);
+    width: var(--circlesDiameter);
+    border: var(--circlesBorderWidth) var(--girlColorSolid) solid;
+    border-radius: calc(var(--circlesDiameter) + var(--circlesBorderWidth));
+    mask-image: conic-gradient(black var(--currentLoadingProgress), transparent var(--currentLoadingProgress));
+    --currentLoadingProgress: calc(var(--loadingPercentageBase)*var(--currentLoadingStage));
+    transition: --currentLoadingProgress 0.5s;
+}

@@ -1,0 +1,370 @@
+{"ext_groupList" : [
+            [
+                {
+                    "id":"kousaka_honoka",
+                    "name":"Kousaka Honoka",
+                    "color":"#F38500",
+                    "pfp":"honoka.png",
+                    "desc":"Honoka is an optimist who is never afraid to take risks.\n\nShe is always in a good mood and likes to look at the bright side of things.\n\nShe is determined and once her mind is set on something, nothing can stop her.\n\nThis is believed to be the driving force behind μ's formation and success.\n\nBut because of her persistent personality, she often overexerts herself."
+                },
+                {
+                    "id":"minami_kotori",
+	                "name":"Minami Kotori",
+                    "color":"#CEBFBF",
+	                "pfp":"kotori.png",
+	                "desc":"Kotori appears to be a feminine, caring, shy, and cheerful girl.\n\nShe is known for having her head in the clouds.\n\nDespite this, she is μ's designer alongside Nico Yazawa, and is also clever and good at studying, being an honor student.\n\nShe has a very huge aptitude for fashion and is very good at drawing costumes for the group."
+                },
+                {
+                    "id":"sonoda_umi",
+	                "name":"Sonoda Umi", 
+                    "color":"#1769FF",
+                    "pfp":"umi.png", 
+                    "desc":"Umi is highly intelligent and a very logical solution-seeker.\n\nShe is generally shy when having to interact with unfamiliar people.\n\nEven with those she is comfortable with, she seems to act reserved by default unless provoked.\n\nShe despises laziness and places a lot of value in hard work and perseverance.\n\nThese qualities combined with Umi's strong will makes her perfect second-in-command to Honoka's leadership in µ's."
+                },
+                {
+                    "id":"koizumi_hanayo",
+	                "name":"Koizumi Hanayo", 
+                    "color":"#6AE673",
+                    "pfp":"hanayo.png", 
+                    "desc":"Hanayo is a very shy, quiet character who doesn't normally voice her opinions.\n\nShe is very reserved and will often let other people make decisions for her because of this.\n\nHowever, she has a very passionate side, and her behavior changes when it comes to school idols and anything related, as she is very enthusiastic about them."
+                },
+                {
+                    "id":"hoshizora_rin",
+	                "name":"Hoshizora Rin", 
+                    "color":"#FFF832",
+                    "pfp":"rin.png", 
+                    "desc":"Rin is very energetic, hard-working and active, She likes sports and is arguably the most athletic member of μ's, on par with Eli Ayase.\n\nRin is known for being very mindful of other people's opinions, as she puts their feelings first before taking action into something.\n\n She is great at many different kinds of sports, enjoys dancing and is the practice leader of μ's."
+                },
+                {
+                    "id":"nishikino_maki",
+	                "name":"Nishikino Maki", 
+                    "color":"#FF503E",
+                    "pfp":"maki.png", 
+                    "desc":"Maki is quite stubborn and has a hard time admitting her true feelings to her peers.\n\nShe also has somewhat childish beliefs which are undoubtedly reflections on her somewhat sheltered and privileged upbringing.\n\nShe is skilled at playing the piano, and is the composer and vocal coach of µ's."
+                },
+                {
+                    "id":"ayase_eli",
+	                "name":"Ayase Eli", 
+                    "color":"#7AEEFF",
+                    "pfp":"eli.png", 
+                    "desc":"Eli is shown to be a perfect role model to the students in Otonokizaka High School.\n\nAs the former student council president, she is often portrayed as a cold and strict character.\n\nOn top of that, she is also very mature and level-headed and acts as a strategist in promoting their group\n\nHer experience with ballet qualifies her as the choreographer of μ's."
+                },
+                {
+                    "id":"toujou_nozomi",
+	                "name":"Toujou Nozomi", 
+                    "color":"#C455F6",
+                    "pfp":"nozomi.png", 
+                    "desc":"Nozomi, as the former vice-president of the student council and the eldest member of μ's, appears as a pretty wise, mysterious and mature girl.\n\nShe's gentle and kind, as well as rather conspirative.\n\nShe also cares deeply for the other girls, and highly cherishes the friendships the group has formed between them."
+                },
+                {
+                    "id":"yazawa_nico",
+	                "name":"Yazawa Nico", 
+                    "color":"#FF4F91",
+                    "pfp":"nico.png", 
+                    "desc":"Nico has quite an abrasive personality, and she usually thinks a bit highly of herself but, despite that, she is also caring.\n\nSometimes, her determination to become the best idol causes her to be a little bit cold, calculating, and somewhat ill-intentioned.\n\nShe is interested in fashion and designs the group's outfits with Kotori Minami."
+                }
+            ],
+            [
+                {
+                    "id":"takami_chika",
+	                "name":"Takami Chika", 
+                    "color":"#FF9547",
+                    "pfp":"chika.png", 
+                    "desc":"10"
+                },
+                {
+                    "id":"watanabe_you",
+	                "name":"Watanabe You", 
+                    "color":"#66C0FF",
+                    "pfp":"you.png", 
+                    "desc":"11"
+                },
+                {
+                    "id":"sakurauchi_riko",
+	                "name":"Sakurauchi Riko", 
+                    "color":"#FF9EAC",
+                    "pfp":"riko.png", 
+                    "desc":"12"
+                },
+                {
+                    "id":"kurosawa_ruby",
+	                "name":"Kurosawa Ruby", 
+                    "color":"#FF6FBE",
+                    "pfp":"ruby.png", 
+                    "desc":"13"
+                },
+                {
+                    "id":"koizumi_hanayo",
+	                "name":"Kunikida Hanamaru", 
+                    "color":"#FFD010",
+                    "pfp":"hanamaru.png", 
+                    "desc":"14"
+                },
+                {
+                    "id":"tsushima_yoshiko",
+	                "name":"Tsushima Yoshiko", 
+                    "color":"#C1CAD4",
+                    "pfp":"yoshiko.png", 
+                    "desc":"15"
+                },
+                {
+                    "id":"matsuura_kanan",
+	                "name":"Matsuura Kanan", 
+                    "color":"#27C1B7",
+                    "pfp":"kanan.png", 
+                    "desc":"16"
+                },
+                {
+                    "id":"ohara_mari",
+	                "name":"Ohara Mari", 
+                    "color":"#C252C6",
+                    "pfp":"mari.png", 
+                    "desc":"17"
+                },
+                {
+                    "id":"kurosawa_dia",
+	                "name":"Kurosawa Dia", 
+                    "color":"#DB0839",
+                    "pfp":"dia.png", 
+                    "desc":"18"
+                }
+            ],
+            [
+                {
+                    "id":"takasaki_yuu",
+	                "name":"Takasaki Yuu", 
+                    "color":"",
+                    "pfp":"yuu.png", 
+                    "desc":"19"
+                },
+                {
+                    "id":"uehara_ayumu",
+	                "name":"Uehara Ayumu", 
+                    "color":"#ed7d95",
+                    "pfp":"ayumu.png", 
+                    "desc":"20"
+                },
+                {
+                    "id":"yuuki_setsuna",
+	                "name":"Yuuki Setsuna", 
+                    "color":"#d81c2f",
+                    "pfp":"setsuna.png", 
+                    "desc":"21"
+                },
+                {
+                    "id":"zhong_lanzhu",
+	                "name":"Zhong Lanzhu", 
+                    "color":"#F8C8C4",
+                    "pfp":"lanzhu.png", 
+                    "desc":"22"
+                },
+                {
+                    "id":"miyashita_ai",
+	                "name":"Miyashita Ai", 
+                    "color":"#ff5800",
+                    "pfp":"ai.png", 
+                    "desc":"23"
+                },
+                {
+                    "id":"tennouji_rina",
+	                "name":"Tennouji Rina", 
+                    "color":"#9CA5B9",
+                    "pfp":"rina.png", 
+                    "desc":"24"
+                },
+                {
+                    "id":"mifune_shioriko",
+	                "name":"Mifune Shioriko", 
+                    "color":"#37B484",
+                    "pfp":"shioriko.png", 
+                    "desc":"25"
+                },
+                {
+                    "id":"nakasu_kasumi",
+	                "name":"Nakasu Kasumi", 
+                    "color":"#e7d600",
+                    "pfp":"kasumi.png", 
+                    "desc":"26"
+                },
+                {
+                    "id":"ousaka_shizuku",
+	                "name":"Ousaka Shizuku", 
+                    "color":"#01b7ed",
+                    "pfp":"shizuku.png", 
+                    "desc":"27"
+                },
+                {
+                    "id":"asaka_karin",
+	                "name":"Asaka Karin", 
+                    "color":"#485ec6",
+                    "pfp":"karin.png", 
+                    "desc":"28"
+                },
+                {
+                    "id":"verde_emma",
+	                "name":"Verde Emma", 
+                    "color":"#84c36e",
+                    "pfp":"emma.png", 
+                    "desc":"29"
+                },
+                {
+                    "id":"konoe_kanata",
+	                "name":"Konoe Kanata", 
+                    "color":"#a664a0",
+                    "pfp":"kanata.png", 
+                    "desc":"30"
+                },
+                {
+                    "id":"taylor_mia",
+	                "name":"Taylor Mia", 
+                    "color":"#A9A898",
+                    "pfp":"mia.png", 
+                    "desc":"31"
+                }
+            ],
+            [
+                {
+                    "id":"shibuya_kanon",
+	                "name":"Shibuya Kanon", 
+                    "color":"#FF7F27",
+                    "pfp":"kanon.png", 
+                    "desc":"32"
+                },
+                {
+                    "id":"tang_keke",
+	                "name":"Tang Keke", 
+                    "color":"#A0FFF9",
+                    "pfp":"keke.png", 
+                    "desc":"33"
+                },
+                {
+                    "id":"arashi_chisato",
+	                "name":"Arashi Chisato", 
+                    "color":"#FF6E90",
+                    "pfp":"chisato.png", 
+                    "desc":"34"
+                },
+                {
+                    "id":"heanna_sumire",
+	                "name":"Heanna Sumire", 
+                    "color":"#74F466",
+                    "pfp":"sumire.png", 
+                    "desc":"35"
+                },
+                {
+                    "id":"hazuki_ren",
+	                "name":"Hazuki Ren", 
+                    "color":"#0000A0",
+                    "pfp":"ren.png", 
+                    "desc":"36"
+                },
+                {
+                    "id":"sakurakouji_kinako",
+	                "name":"Sakurakouji Kinako", 
+                    "color":"#FFF442",
+                    "pfp":"kinako.png", 
+                    "desc":"37"
+                },
+                {
+                    "id":"wakana_shiki",
+	                "name":"Wakana Shiki", 
+                    "color":"#B2FFDD",
+                    "pfp":"shiki.png", 
+                    "desc":"39"
+                },
+                {
+                    "id":"yoneme_mei",
+	                "name":"Yoneme Mei", 
+                    "color":"#FF3535",
+                    "pfp":"mei.png", 
+                    "desc":"38"
+                },
+                {
+                    "id":"onitsuka_natsumi",
+	                "name":"Onitsuka Natsumi", 
+                    "color":"#FF51C4",
+                    "pfp":"natsumi.png", 
+                    "desc":"40"
+                },
+                {
+                    "id":"onitsuka_tomari",
+	                "name":"Onitsuka Tomari", 
+                    "color":"#76DDE9",
+                    "pfp":"tomari.png", 
+                    "desc":"41"
+                },
+                {
+                    "id":"wien_margarete",
+	                "name":"Wien Margarete", 
+                    "color":"#E49DFD",
+                    "pfp":"wien.png", 
+                    "desc":"42"
+                }
+            ],
+            [
+                {
+                    "id":"hinoshita_kaho",
+	                "name":"Hinoshita Kaho", 
+                    "color":"#F8B500",
+                    "pfp":"kaho.png", 
+                    "desc":"43"
+                },
+                {
+                    "id":"murano_sayaka",
+	                "name":"Murano Sayaka", 
+                    "color":"#5383C3",
+                    "pfp":"sayaka.png", 
+                    "desc":"44"
+                },
+                {
+                    "id":"osawa_rurino",
+	                "name":"Osawa Rurino", 
+                    "color":"#E7609E",
+                    "pfp":"rurino.png", 
+                    "desc":"45"
+                },
+                {
+                    "id":"momose_ginko",
+	                "name":"Momose Ginko", 
+                    "color":"#A2D7DD",
+                    "pfp":"ginko.png", 
+                    "desc":"46"
+                },
+                {
+                    "id":"kachimachi_kosuzu",
+	                "name":"Kachimachi Kosuzu", 
+                    "color":"#FAD764",
+                    "pfp":"kosuzu.png", 
+                    "desc":"47"
+                },
+                {
+                    "id":"anyoji_hime",
+	                "name":"Anyoji Hime", 
+                    "color":"#9D8DE2",
+                    "pfp":"hime.png", 
+                    "desc":"48"
+                },
+                {
+                    "id":"otomune_kozue",
+	                "name":"Otomune Kozue", 
+                    "color":"#68BE8D",
+                    "pfp":"kozue.png", 
+                    "desc":"49"
+                },
+                {
+                    "id":"yuugiri_tsuzuri",
+	                "name":"Yuugiri Tsuzuri", 
+                    "color":"#BA2636",
+                    "pfp":"tsuzuri.png", 
+                    "desc":"50"
+                },
+                {
+                    "id":"fujishima_megumi",
+	                "name":"Fujishima Megumi", 
+                    "color":"#C8C2C6",
+                    "pfp":"megumi.png", 
+                    "desc":"51"
+                }
+            ]
+    ]
+}
